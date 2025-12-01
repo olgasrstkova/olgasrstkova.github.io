@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olga Srstková – Photographs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div>
+          <h1 class="site-title">Olga Srstková</h1>
+          <p class="site-subtitle">Portfolio</p>
+        </div>
+        <nav class="main-nav">
+          <a href="index.html">Bio</a>
+          <a href="links.html">Links</a>
+          <a href="videos.html">Videos</a>
+          <a href="photographs.html">Photographs</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="photos" class="section section-muted">
+        <div class="container">
+          <h2>Photographs</h2>
+          <p class="section-intro">
+            A selection of photographs hosted with this site. Replace the placeholder images with your own.
+          </p>
+          <div class="photo-grid">
+            <figure class="photo-card">
+              <img src="images/photo1.jpg" alt="Description of photograph 1" />
+              <figcaption>Photograph title or description 1</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="images/photo2.jpg" alt="Description of photograph 2" />
+              <figcaption>Photograph title or description 2</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="images/photo3.jpg" alt="Description of photograph 3" />
+              <figcaption>Photograph title or description 3</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="images/photo4.jpg" alt="Description of photograph 4" />
+              <figcaption>Photograph title or description 4</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Olga Srstková</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

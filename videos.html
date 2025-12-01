@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olga Srstková – Videos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div>
+          <h1 class="site-title">Olga Srstková</h1>
+          <p class="site-subtitle">Portfolio</p>
+        </div>
+        <nav class="main-nav">
+          <a href="index.html">Bio</a>
+          <a href="links.html">Links</a>
+          <a href="videos.html">Videos</a>
+          <a href="photographs.html">Photographs</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="videos" class="section">
+        <div class="container">
+          <h2>Videos</h2>
+          <p class="section-intro">
+            Selected work hosted on YouTube. Replace the video URLs with your own.
+          </p>
+          <div class="video-grid">
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Video 1"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h3>Project Title 1</h3>
+              <p>Short description of the video or project.</p>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Video 2"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <h3>Project Title 2</h3>
+              <p>Short description of the video or project.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Olga Srstková</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
