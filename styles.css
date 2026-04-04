@@ -120,6 +120,12 @@ body {
   width: 100%;
 }
 
+/* Hidden for now: Photos, Other — delete this block to show again */
+.main-nav a[href="photographs.html"],
+.main-nav a[href="links.html"] {
+  display: none;
+}
+
 main {
   padding: 2.5rem 0 3.5rem;
   flex: 1;
