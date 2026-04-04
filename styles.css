@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600&display=swap");
 
 :root {
-  --bg: #070713;
-  --bg-alt: #101020;
-  --card: #181831;
-  --accent: #f6b17a;
-  --accent-soft: rgba(246, 177, 122, 0.12);
-  --text: #f7f7ff;
-  --muted: #a5a5c7;
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.65);
+  --bg: #ffffff;
+  --bg-alt: #ffffff;
+  --card: #ffffff;
+  --accent: #000000;
+  --accent-soft: rgba(0, 0, 0, 0.04);
+  --text: #111111;
+  --muted: #555555;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --shadow-soft: none;
 }
 
 *,
@@ -22,16 +22,19 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
-  font-family: "Bebas Neue", system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: "Commissioner", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #232340 0, #050510 55%);
+  background: var(--bg);
   color: var(--text);
   font-size: 1.1rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -42,12 +45,7 @@ body {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(20px);
-  background: radial-gradient(circle at top left, #26264b, #050510 65%);
-  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg);
 }
 
 .header-content {
@@ -59,11 +57,24 @@ body {
 }
 
 .site-title {
-  font-size: 2rem;
-  letter-spacing: 0.06em;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
+}
+
+.site-title a {
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 1rem;
+}
+
+.site-title a:hover,
+.site-title a:focus-visible {
+  color: var(--text);
 }
 
 .site-subtitle {
@@ -83,6 +94,9 @@ body {
   text-decoration: none;
   position: relative;
   padding-bottom: 0.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 1rem;
 }
 
 .main-nav a::after {
@@ -108,6 +122,7 @@ body {
 
 main {
   padding: 2.5rem 0 3.5rem;
+  flex: 1;
 }
 
 .section {
@@ -119,7 +134,7 @@ main {
 }
 
 .section-muted {
-  background: radial-gradient(circle at top, #13132a, #050510 55%);
+  background: var(--bg);
 }
 
 .section h2 {
@@ -155,10 +170,10 @@ main {
   text-align: center;
   border-radius: 1.5rem;
   overflow: hidden;
-  background: radial-gradient(circle at top, #202041, #0d0d1f 60%);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-soft);
-  padding: 0.75rem;
+  background: var(--bg);
+  border: none;
+  box-shadow: none;
+  padding: 0;
   max-width: 320px;
 }
 
@@ -195,9 +210,9 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 0.95rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-subtle);
-  background: linear-gradient(90deg, rgba(24, 24, 49, 0.95), rgba(10, 10, 26, 0.95));
+  border-radius: 0;
+  border: none;
+  background: transparent;
 }
 
 .link-list span {
@@ -231,20 +246,19 @@ main {
 }
 
 .video-card {
-  background: radial-gradient(circle at top, #26264b, #101026 60%);
-  border-radius: 1.25rem;
-  padding: 1rem 1rem 1.25rem;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  border-radius: 0;
+  padding: 0 0 1.25rem;
+  box-shadow: none;
+  border: none;
 }
 
 .video-wrapper {
   position: relative;
   padding-top: 56.25%;
-  border-radius: 0.9rem;
+  border-radius: 0;
   overflow: hidden;
   background: #000;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.85);
 }
 
 .video-wrapper iframe {
@@ -281,11 +295,11 @@ main {
 
 .photo-card {
   margin: 0;
-  border-radius: 1rem;
+  border-radius: 0;
   overflow: hidden;
-  background: radial-gradient(circle at top, #202041, #101020 55%);
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.75);
+  background: transparent;
+  border: none;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
 }
@@ -305,11 +319,11 @@ main {
 }
 
 .site-footer {
-  border-top: 1px solid var(--border-subtle);
   padding: 1.2rem 0 2rem;
-  background: radial-gradient(circle at bottom, #191938, #050510 55%);
+  background: var(--bg);
   color: var(--muted);
   font-size: 0.85rem;
+  text-align: left;
 }
 
 .site-footer p {
