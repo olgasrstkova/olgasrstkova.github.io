@@ -37,6 +37,27 @@ body {
   flex-direction: column;
 }
 
+body.page-home {
+  background-color: #1a1a1a;
+  background-image: url("home-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  body.page-home {
+    background-attachment: scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-home {
+    background-attachment: scroll;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1080px;
