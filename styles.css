@@ -37,10 +37,19 @@ body {
   flex-direction: column;
 }
 
+html:has(body.page-home) {
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
 body.page-home {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: none;
   background-color: #1a1a1a;
   background-image: url("home-background.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
